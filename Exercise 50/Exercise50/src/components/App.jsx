@@ -1,6 +1,6 @@
 import Hello from './Hello';
 import Message from './Message'
-
+import Welcome from './Welcome';
 const App = () => {
     return (
         <div>
@@ -8,6 +8,7 @@ const App = () => {
         <div> <Hello /> </div>
         <div> <Hello /> </div>
         <div> <Message /> </div>
+        <div> <Welcome name="Ramiro"/> </div>
         </div>
     )
 
