@@ -1,5 +1,10 @@
 export function Age({ age }) {
-  return <p>Your age is {age}.</p>;
+  return( 
+    <div>
+  {age > 18 && <p>Your age is {age}.</p>}
+  {age <= 18 && <p>You are very young</p>}
+  </div>
+  )
 }
 
 export default Age;
