@@ -12,7 +12,7 @@ const App = () => {
     )
 
 }
-
+// Exercise 52
 // Se puede utilizar el componente 'Hello' más de una vez sin tener problemas. 
 // El componente Message se puede renderizar sin problemas 
 export default App; 
