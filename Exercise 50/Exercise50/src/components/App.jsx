@@ -1,6 +1,7 @@
 import Hello from './Hello';
 import Message from './Message'
 import Welcome from './Welcome';
+import  AlertClock  from './AlertClock';
 const App = () => {
     return (
         <div>
@@ -9,6 +10,7 @@ const App = () => {
         <div> <Hello /> </div>
         <div> <Message /> </div>
         <div> <Welcome name="Ramiro" age={25}/> </div>
+        <div><AlertClock /></div>
         </div>
     )
 
