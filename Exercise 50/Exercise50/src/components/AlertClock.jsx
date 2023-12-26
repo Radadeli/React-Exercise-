@@ -10,3 +10,5 @@ export function AlertClock() {
         </div>
     )
 }
+
+export default AlertClock
