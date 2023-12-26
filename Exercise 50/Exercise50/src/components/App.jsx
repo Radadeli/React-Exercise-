@@ -3,6 +3,8 @@ import Message from './Message'
 import Welcome from './Welcome';
 import  AlertClock  from './AlertClock';
 import Counter from './Counter';
+
+
 const App = () => {
     return (
         <div>
@@ -14,6 +16,7 @@ const App = () => {
         <div><AlertClock /></div>
 
         <Counter/> 
+       
         </div>
     )
 
