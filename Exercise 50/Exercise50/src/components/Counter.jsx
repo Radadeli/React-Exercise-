@@ -6,6 +6,7 @@ export function Counter() {
 
     function handleCounterIncrement() {
         setCounter((c) => c + 1)
+        console.log(`The value of the counter is ${counter}`)
    }
 
    return (
