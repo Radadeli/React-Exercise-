@@ -4,6 +4,7 @@ import Welcome from "./Welcome";
 import AlertClock from "./AlertClock";
 import Counter from "./Counter";
 import Clock from "./Clock";
+import { MouseClicker } from "./MouseClicker";
 
 const App = () => {
   return (
@@ -34,6 +35,8 @@ const App = () => {
 
       <Counter />
       <Clock />
+
+      <MouseClicker />
     </div>
   );
 };
