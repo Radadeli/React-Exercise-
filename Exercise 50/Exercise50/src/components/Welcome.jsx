@@ -8,8 +8,11 @@ export function Welcome({ name, age }) {
     {age > 18 && age < 65 && <Age age = {age} />}
     <Age age = {age} />
     {age > 18 && age < 65 && name === 'Jhon' && <Age age = {age} />}
+
+    <h2>Welcome, {name ? name : 'Stranger'}!</h2>
     </div>
+    
   );
-}
+  }
 
 export default Welcome; 
