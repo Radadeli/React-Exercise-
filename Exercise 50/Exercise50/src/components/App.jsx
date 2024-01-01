@@ -6,6 +6,7 @@ import Counter from "./Counter";
 import Clock from "./Clock";
 import { MouseClicker } from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 const App = () => {
   return (
@@ -41,6 +42,10 @@ const App = () => {
 <hr />
       <div>
         <InteractiveWelcome />
+      </div>
+
+      <div>
+        <Login />
       </div>
     </div>
   );
