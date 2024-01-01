@@ -18,14 +18,22 @@ export function Login({ onLogin }) {
    const handleLoginClick = () => {
     onLogin({ username, password, remember})
 }
+const handleLogin = (event) => {
+    event.preventDefault();
+
+   
+    onLogin({ username, password, remember });
+}
     const handleResetForm = () => {
         setUsername('');
         setPassword('');
         setRemember('');
     }
+    
     const isDisabled = username.trim() === '' || password.trim() === ''
     return(
         <div>
+            <form onSubmit={handleLogin}> </form>
             <input name="username" value={username} onChange={handleUsernameChange} />
             <input name="password" type="password" value={password} onChange={handlePasswordChange}/>
             <input type="checkbox" checked={remember} onChange={handleRememberChange} />
