@@ -4,7 +4,7 @@ export function Login({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [remember, setRemember] = useState('');
-
+    const [reset, setReset] = useState('');
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -18,6 +18,11 @@ export function Login({ onLogin }) {
    const handleLoginClick = () => {
     onLogin({ username, password, remember})
 }
+    const handleResetForm = () => {
+        setUsername('');
+        setPassword('');
+        setRemember('');
+    }
     const isDisabled = username.trim() === '' || password.trim() === ''
     return(
         <div>
@@ -25,6 +30,7 @@ export function Login({ onLogin }) {
             <input name="password" type="password" value={password} onChange={handlePasswordChange}/>
             <input type="checkbox" checked={remember} onChange={handleRememberChange} />
             <button onClick={handleLoginClick} disabled= {isDisabled}> Login</button>
+            <button onClick={handleResetForm}> Reset </button>
         </div>
     )
 }
