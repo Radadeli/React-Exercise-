@@ -7,6 +7,7 @@ import Clock from "./Clock";
 import { MouseClicker } from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UnControlledLogin } from "./UncontrolledLogin";
 
 const App = () => {
   return (
@@ -46,6 +47,10 @@ const App = () => {
 
       <div>
         <Login />
+      </div>
+      <hr />
+      <div>
+        <UnControlledLogin/>
       </div>
     </div>
   );
