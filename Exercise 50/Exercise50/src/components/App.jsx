@@ -8,6 +8,7 @@ import { MouseClicker } from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UnControlledLogin } from "./UncontrolledLogin";
+import FocusableInput from "./FocusableInput ";
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
       <hr />
       <div>
         <UnControlledLogin/>
+      </div>
+      <br />
+      <div>
+    <FocusableInput />
       </div>
     </div>
   );
