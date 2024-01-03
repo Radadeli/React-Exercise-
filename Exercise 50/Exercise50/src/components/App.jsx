@@ -9,6 +9,7 @@ import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UnControlledLogin } from "./UncontrolledLogin";
 import FocusableInput from "./FocusableInput ";
+import { UseEffectComponent } from "./UseRefComponent";
 
 const App = () => {
   return (
@@ -56,6 +57,9 @@ const App = () => {
       <br />
       <div>
     <FocusableInput />
+      </div>
+      <div>
+      <UseEffectComponent />
       </div>
     </div>
   );
