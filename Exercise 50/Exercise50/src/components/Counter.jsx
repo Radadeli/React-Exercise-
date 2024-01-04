@@ -1,18 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import CounterDisplay from "./CounterDisplay";
 
-export function Counter() {
-   const [counter, setCounter] = useState(0)
+export function Counter({ initialValue }) {
+   const [counter, setCounter] = useState(initialValue)
+   const directionRef = useRef(null)
 
-    function handleCounterIncrement() {
-        setCounter((c) => c + 1)
-       
-        
-   }
-   useEffect(() =>{
-    console.log(`The value of the counter is ${counter}`)
-   }, [counter])
+   useEffect(() => {
+    if (counter > initialValue) {
+      directionRef.current = "up";
+    } else if (counter < initialValue) {
+      directionRef.current = "down";
+    } else {
+      directionRef.current = null;
+    }
 
+    if (directionRef.current !== null) {
+      console.log(`Direction: ${directionRef.current}`);
+    }
+  }, [counter, initialValue]);
+
+  function handleCounterIncrement() {
+    setCounter((c) => c + 1);
+  }
    return (
     <div>
         <h2> Counted to {counter}</h2>
