@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from "./ToDoList.module.scss"
+
 export function ToDoList() {
   const [todos, setTodos] = useState([]);
 
@@ -18,7 +20,7 @@ export function ToDoList() {
     return updatedTodos
   }
   return (
-    <div>
+    <div className={styles.ToDoList}>
       <h1>TodoList</h1>
       <input type="text" id="todoInput" />
       <button onClick={addTodo}> Todo </button>

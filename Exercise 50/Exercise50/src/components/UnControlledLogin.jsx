@@ -16,8 +16,8 @@ export function UnControlledLogin() {
 }
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <input name="username" />
+        <form  onSubmit={handleFormSubmit}>
+            <input className="border-dashed	border-style: dashed;" name="username" />
             <input name="password" type="password" />
             <input name="session" type="checkbox" />
             <button>Login</button>

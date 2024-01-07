@@ -1,7 +1,7 @@
 import Age from './Age'
 export function Welcome({ name, age }) {
   return (
-    <div>
+    <div className='welcome'>
     <p>Welcome, <strong>{name}</strong> </p>
     {age > 18 && <Age age = {age} />}
     {Boolean (age) && <Age age = {age} />}

@@ -8,7 +8,7 @@ import { MouseClicker } from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UnControlledLogin } from "./UncontrolledLogin";
-import FocusableInput from "./FocusableInput ";
+import FocusableInput from "./FocusableInput";
 import { UseEffectComponent } from "./UseRefComponent";
 import { Colors } from "./Colors";
 import ToDoList from "./ToDoList";
@@ -48,11 +48,13 @@ const App = () => {
       <div>
         <InteractiveWelcome />
       </div>
-
+<br />
       <div>
+        
         <Login />
       </div>
       <hr />
+      <br />
       <div>
         <UnControlledLogin/>
       </div>
