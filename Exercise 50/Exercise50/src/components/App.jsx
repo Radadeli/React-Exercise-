@@ -10,6 +10,8 @@ import { Login } from "./Login";
 import { UnControlledLogin } from "./UncontrolledLogin";
 import FocusableInput from "./FocusableInput ";
 import { UseEffectComponent } from "./UseRefComponent";
+import { Colors } from "./Colors";
+import ToDoList from "./ToDoList";
 
 const App = () => {
   return (
@@ -60,6 +62,12 @@ const App = () => {
       </div>
       <div>
       <UseEffectComponent />
+      </div>
+      <div>
+        <Colors />
+      </div>
+      <div>
+        <ToDoList />
       </div>
     </div>
   );
