@@ -1,3 +1,4 @@
+import "./UnControlledLogin.css"
 export function UnControlledLogin() {
  function handleFormSubmit (event){
     event.preventDefault()
@@ -16,12 +17,14 @@ export function UnControlledLogin() {
 }
 
     return (
-        <form  onSubmit={handleFormSubmit}>
-            <input className="border-dashed	border-style: dashed;" name="username" />
-            <input name="password" type="password" />
-            <input name="session" type="checkbox" />
-            <button>Login</button>
-            <button type="reset"> Reset </button>
-        </form>
+        <form className="uncontrolledform" onSubmit={handleFormSubmit}>
+      <input className="w-60 border-2" placeholder="Your name" name="username" type="text" />
+      <input className="w-60 border-2" placeholder="Password" name="password" type="password" />
+      <input className="w-60" name="remember" type="checkbox" />
+      <button className="w-12 text-green-950 font-bold">Login</button>
+      <button className="w-12 text-green-950 font-bold" type="reset">Reset</button>
+    </form>
     )
 }
+
+export default UnControlledLogin;

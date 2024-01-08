@@ -1,20 +1,48 @@
-import { useRef, useEffect } from "react"
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export function FocusableInput() {
 
-    const inputRef = useRef(null)
+    return (
+        <>
+          <InputGroup size="lg" className="mb-3">
+            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+            <Form.Control
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </InputGroup>
     
-    useEffect(( ) => {
-        inputRef.current.focus();
-
-    }, [])
-
-    return(
-        <div>
-            <h1>Focusable Input</h1>
-            <input ref={inputRef} />
-        </div>
-    )
+          <InputGroup className="mb-3">
+            <Form.Control
+              placeholder="Recipient's username"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>
+          </InputGroup>
+    
+          <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label>
+          <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon3">
+              https://example.com/users/
+            </InputGroup.Text>
+            <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+          </InputGroup>
+    
+          <InputGroup className="mb-3">
+            <InputGroup.Text>$</InputGroup.Text>
+            <Form.Control aria-label="Amount (to the nearest dollar)" />
+            <InputGroup.Text>.00</InputGroup.Text>
+          </InputGroup>
+    
+          <InputGroup>
+            <InputGroup.Text>With textarea</InputGroup.Text>
+            <Form.Control as="textarea" aria-label="With textarea" />
+          </InputGroup>
+        </>
+      );
 }
 
 export default FocusableInput
