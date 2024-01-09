@@ -12,10 +12,23 @@ import FocusableInput from "./FocusableInput";
 import { UseEffectComponent } from "./UseRefComponent";
 import { Colors } from "./Colors";
 import ToDoList from "./ToDoList";
+import Container from "./Container"
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
 
-const App = () => {
+const App  = () => {
+  const [language, setLanguage] = useState('en')
+  function handleSetLanguage(language){
+    setLanguage(language)
+  }
   return (
     <div>
+      <button style={{width:'30px'}} onClick={() => handleSetLanguage('en')}>ES</button>
+      <button onClick={() => handleSetLanguage('es')}>EN</button>
+    <Container title={<h1>The best application</h1>} >
+      <LanguageContext.Provider value={language}>
+      <Clock />
+      </LanguageContext.Provider>
       <div>
         {" "}
         <Hello />{" "}
@@ -41,7 +54,7 @@ const App = () => {
       </div>
 
       <Counter />
-      <Clock />
+      
 
       <MouseClicker />
 <hr />
@@ -71,6 +84,7 @@ const App = () => {
       <div>
         <ToDoList />
       </div>
+    </Container>
     </div>
   );
 };
