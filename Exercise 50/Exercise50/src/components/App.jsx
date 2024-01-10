@@ -12,79 +12,97 @@ import FocusableInput from "./FocusableInput";
 import { UseEffectComponent } from "./UseRefComponent";
 import { Colors } from "./Colors";
 import ToDoList from "./ToDoList";
-import Container from "./Container"
+import Container from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
+import { GitHubUsers } from "./GitHubUsers";
 
-const App  = () => {
-  const [language, setLanguage] = useState('en')
-  function handleSetLanguage(language){
-    setLanguage(language)
+const App = () => {
+  const [language, setLanguage] = useState("en");
+  function handleSetLanguage(language) {
+    setLanguage(language);
   }
   return (
     <div>
-      <button style={{width:'30px'}} onClick={() => handleSetLanguage('en')}>ES</button>
-      <button onClick={() => handleSetLanguage('es')}>EN</button>
-    <Container title={<h1>The best application</h1>} >
-      <LanguageContext.Provider value={language}>
-      <Clock />
-      </LanguageContext.Provider>
-      <div>
-        {" "}
-        <Hello />{" "}
-      </div>
-      <div>
-        {" "}
-        <Hello />{" "}
-      </div>
-      <div>
-        {" "}
-        <Hello />{" "}
-      </div>
-      <div>
-        {" "}
-        <Message />{" "}
-      </div>
-      <div>
-        {" "}
-        <Welcome name="Ramiro" age={25} />{" "}
-      </div>
-      <div>
-        <AlertClock />
-      </div>
+      <button style={{ width: "30px" }} onClick={() => handleSetLanguage("en")}>
+        ES
+      </button>
+      <button onClick={() => handleSetLanguage("es")}>EN</button>
+      <Container title={<h1>The best application</h1>}>
+        <LanguageContext.Provider value={language}>
+          <Clock />
+        </LanguageContext.Provider>
+        <div>
+          {" "}
+          <Hello />{" "}
+        </div>
+        <div>
+          {" "}
+          <Hello />{" "}
+        </div>
+        <div>
+          {" "}
+          <Hello />{" "}
+        </div>
+        <br />
+        <div>
+          {" "}
+          <Message />{" "}
+        </div>
+        <br />
+        <div>
+          {" "}
+          <Welcome name="Ramiro" age={25} />{" "}
+        </div>
+        <br />
+        <div>
+          <AlertClock />
+        </div>
+        <br />
+        <div>
+          <Counter />
+        </div>
+        <br />
+        <div>
+          <MouseClicker />
+        </div>
+        <br />
 
-      <Counter />
-      
+        <div>
+          <InteractiveWelcome />
+        </div>
+        <br />
+        <div>
+          <Login />
+        </div>
+        <hr />
+        <br />
+        <div>
+          <UnControlledLogin />
+        </div>
+        <br />
 
-      <MouseClicker />
-<hr />
-      <div>
-        <InteractiveWelcome />
-      </div>
-<br />
-      <div>
+        <div>
+          <FocusableInput />
+        </div>
+        <div>
+          <UseEffectComponent />
+        </div>
+        <div>
+          <Colors />
+        </div>
+        <div>
+          <ToDoList />
+        </div>
         
-        <Login />
-      </div>
+      </Container>
+      <br />
+      <div>
       <hr />
       <br />
-      <div>
-        <UnControlledLogin/>
+        <GitHubUsers/>
+        <hr />
       </div>
-      <br />
-      <div>
-    <FocusableInput />
-      </div>
-      <div>
-      <UseEffectComponent />
-      </div>
-      <div>
-        <Colors />
-      </div>
-      <div>
-        <ToDoList />
-      </div>
-    </Container>
     </div>
   );
 };
