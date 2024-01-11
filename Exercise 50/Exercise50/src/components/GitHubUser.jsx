@@ -16,7 +16,7 @@ export function GitHubUser({ username }) {
       setData(json);
     } catch (error) {
       setError(error);
-      setData(null);
+      setData(null); 
     } finally {
       setLoading(false);
     }

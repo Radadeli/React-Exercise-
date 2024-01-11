@@ -16,6 +16,8 @@ import Container from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { GitHubUsers } from "./GitHubUsers";
+import { CounterHook } from "./CounterHook";
+
 
 const App = () => {
   const [language, setLanguage] = useState("en");
@@ -103,6 +105,7 @@ const App = () => {
         <GitHubUsers/>
         <hr />
       </div>
+      <CounterHook/>
     </div>
   );
 };
