@@ -1,12 +1,11 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export function GitHubUser({ username }) {
+const useGithubUser = (username) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  async function fetchGitHubUser(username) {
+  const fetchGitHubUser = async (username) => {
     setLoading(true);
     setError(null);
     try {
@@ -16,19 +15,19 @@ export function GitHubUser({ username }) {
       setData(json);
     } catch (error) {
       setError(error);
-      setData(null); 
+      setData(null);
     } finally {
       setLoading(false);
     }
-  }
+  };
+
   useEffect(() => {
-    fetchGitHubUser(username);
+    if (username) {
+      fetchGitHubUser(username);
+    }
   }, [username]);
-  return (
-    <div>
-      {loading && <h1>Loading...</h1>}
-      {error && <h1>There has been an error</h1>}
-      {data && <h1>{data.name}</h1>}
-    </div>
-  );
-}
+
+  return { data, loading, error, fetchGitHubUser };
+};
+
+export default useGithubUser;

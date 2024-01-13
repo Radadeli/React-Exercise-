@@ -106,6 +106,8 @@ const App = () => {
         <hr />
       </div>
       <CounterHook/>
+
+      
     </div>
   );
 };
