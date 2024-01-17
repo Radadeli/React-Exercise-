@@ -17,6 +17,7 @@ import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { GitHubUsers } from "./GitHubUsers";
 import { CounterHook } from "./CounterHook";
+import { Routes, Route } from "react-router-dom";
 
 
 const App = () => {
@@ -25,90 +26,89 @@ const App = () => {
     setLanguage(language);
   }
   return (
-    <div>
+    
+    <Routes>
+    
       <button style={{ width: "30px" }} onClick={() => handleSetLanguage("en")}>
         ES
       </button>
       <button onClick={() => handleSetLanguage("es")}>EN</button>
       <Container title={<h1>The best application</h1>}>
         <LanguageContext.Provider value={language}>
+         
           <Clock />
         </LanguageContext.Provider>
-        <div>
-          {" "}
-          <Hello />{" "}
-        </div>
-        <div>
-          {" "}
-          <Hello />{" "}
-        </div>
-        <div>
-          {" "}
-          <Hello />{" "}
-        </div>
+        
+   
+          <Hello />
+         
+          <Hello />
+  
+        
+          <Hello />
+          <br />
+               
+          <Message />
+  
         <br />
-        <div>
-          {" "}
-          <Message />{" "}
-        </div>
+        
+  
+        <Route path="/Welcome" element={<Welcome/>} />
+     
+        
+        <AlertClock/> 
+        
         <br />
-        <div>
-          {" "}
-          <Welcome name="Ramiro" age={25} />{" "}
-        </div>
-        <br />
-        <div>
-          <AlertClock />
-        </div>
-        <br />
-        <div>
+        
           <Counter />
-        </div>
+        
         <br />
-        <div>
+        
           <MouseClicker />
-        </div>
+    
         <br />
 
-        <div>
+        
           <InteractiveWelcome />
-        </div>
+      
         <br />
-        <div>
+        
           <Login />
-        </div>
+        
         <hr />
         <br />
-        <div>
+        
           <UnControlledLogin />
-        </div>
+        
         <br />
 
-        <div>
+        
           <FocusableInput />
-        </div>
-        <div>
+        
+        
           <UseEffectComponent />
-        </div>
-        <div>
+        
+        
           <Colors />
-        </div>
-        <div>
+        
+        
           <ToDoList />
-        </div>
+        
         
       </Container>
       <br />
-      <div>
+      
       <hr />
       <br />
         <GitHubUsers/>
         <hr />
-      </div>
-      <CounterHook/>
-
       
-    </div>
+      <CounterHook/>
+      <hr />
+      <br />
+     
+      
+      </Routes>
   );
 };
 // Exercise 52

@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.uncontrolledform{
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid black;
+.uncontrolledform {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
 }
