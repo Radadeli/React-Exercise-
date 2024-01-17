@@ -60,7 +60,7 @@ const App = () => {
         
         <br />
         
-          <Counter />
+        <Route path="/Counter" element={<Counter/>} />
         
         <br />
         
