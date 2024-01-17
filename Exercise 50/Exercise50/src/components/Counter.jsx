@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CounterDisplay from "./CounterDisplay";
-import { Link } from "react-router-dom";
+
 
 export function Counter({ initialValue }) {
    const [counter, setCounter] = useState(initialValue)
@@ -32,7 +32,7 @@ export function Counter({ initialValue }) {
         handleCounterDecrement={() => setCounter((c) => c - 1)}
         handleCounterReset={() => setCounter(0)}
       />
-       <Link to="/Counter">Counter Exercise</Link>
+       
     </div>
    )
     

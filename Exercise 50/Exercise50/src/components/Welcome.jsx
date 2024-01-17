@@ -1,5 +1,5 @@
 import Age from './Age'
-import { Link } from 'react-router-dom';
+
 export function Welcome({ name, age }) {
   return (
     <div className='welcome'>
@@ -11,7 +11,7 @@ export function Welcome({ name, age }) {
     {age > 18 && age < 65 && name === 'Jhon' && <Age age = {age} />}
 
     <h2>Welcome, {name ? name : 'Stranger'}!</h2>
-    <Link to="/Welcome">Welcome Exercise</Link>
+    
     </div>
     
   );
