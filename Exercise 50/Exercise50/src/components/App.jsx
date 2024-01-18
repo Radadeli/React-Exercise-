@@ -16,8 +16,8 @@ const App = () => {
 
         <Link to="/Welcome"> Welcome Exercise</Link>
         <Link to="/Counter">Counter Exercise</Link>
-        <Link to="/users/:radadeli">ShowGithubUser Exercise</Link>
         <Link to="/users">GithubUserList Exercise</Link>
+        <Link to="/users/radadeli">ShowGithubUser Exercise</Link>
         <Link to="/AlertClock">AlertClock Exercise</Link>
         <Link to="/FilteredList">FilteredList Exercise</Link>
         <Link to="/Login">Login Exercise</Link>
@@ -28,13 +28,13 @@ const App = () => {
       <Routes>
 
         <Route path="/Welcome" element={<Welcome name={"Ramiro"} age={28} />} />
-       
+
         <Route path="/Counter" element={<Counter />} />
 
-        <Route path="/users/:radadeli" element={<ShowGithubUser />} />
-
-        <Route path="/users" element={<GithubUserList />} />
-
+        <Route path="/users" element={<GithubUserList />}>
+        <Route index element= {<p>Add a user and select it</p>}/>
+        <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
         <Route path="/AlertClock" element={<AlertClock />} />
         
         <Route path="/FilteredList" element={<FilteredList />} />
