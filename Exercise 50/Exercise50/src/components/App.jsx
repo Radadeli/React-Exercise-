@@ -7,26 +7,33 @@ import { FilteredList } from "./FilteredList";
 import { AlertClock } from "./AlertClock";
 import { Login } from "./Login";
 import NotFound from "./NotFound";
+import { GithubUserList } from "./GithubUserList";
 
 const App = () => {
   return (
     <div>
       <nav className={styles.Navbar}>
+
         <Link to="/Welcome"> Welcome Exercise</Link>
         <Link to="/Counter">Counter Exercise</Link>
         <Link to="/users/:radadeli">ShowGithubUser Exercise</Link>
+        <Link to="/users">GithubUserList Exercise</Link>
         <Link to="/AlertClock">AlertClock Exercise</Link>
         <Link to="/FilteredList">FilteredList Exercise</Link>
         <Link to="/Login">Login Exercise</Link>
         <Link to="/NotFound">NotFound Exercise</Link>
+
       </nav>
       
       <Routes>
+
         <Route path="/Welcome" element={<Welcome name={"Ramiro"} age={28} />} />
        
         <Route path="/Counter" element={<Counter />} />
 
         <Route path="/users/:radadeli" element={<ShowGithubUser />} />
+
+        <Route path="/users" element={<GithubUserList />} />
 
         <Route path="/AlertClock" element={<AlertClock />} />
         

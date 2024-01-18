@@ -1,6 +1,6 @@
 
 import { useParams } from 'react-router-dom';
-import { GitHubUser } from './GitHubUser';
+import { GitHubUsers } from './GitHubUsers';
 
 export function ShowGithubUser() {
   const { username } = useParams();
@@ -8,7 +8,7 @@ export function ShowGithubUser() {
   return (
     <div>
       <h1>Show GitHub User</h1>
-      <GitHubUser username={username} />
+      <GitHubUsers username={username} />
     </div>
   );
 }
