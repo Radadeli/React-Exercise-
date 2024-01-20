@@ -8,6 +8,7 @@ import { AlertClock } from "./AlertClock";
 import { Login } from "./Login";
 import NotFound from "./NotFound";
 import { GithubUserList } from "./GithubUserList";
+import GitHubUsers from "./GitHubUsers";
 
 
 const App = () => {
@@ -17,12 +18,14 @@ const App = () => {
 
         <Link to="/Welcome"> Welcome Exercise</Link>
         <Link to="/Counter">Counter Exercise</Link>
-        <Link to="/users">GithubUserList Exercise</Link>
-        <Link to="/users/radadeli">ShowGithubUser Exercise</Link>
+        {/* <Link to="/users">GithubUserList Exercise</Link> */}
+        {/* <Link to="/users/radadeli">ShowGithubUser Exercise</Link> */}
         <Link to="/AlertClock">AlertClock Exercise</Link>
         <Link to="/FilteredList">FilteredList Exercise</Link>
         <Link to="/Login">Login Exercise</Link>
         <Link to="/NotFound">NotFound Exercise</Link>
+        <Link to="/users">Exercise Users</Link>
+        
 
 
       </nav>
@@ -33,10 +36,10 @@ const App = () => {
 
         <Route path="/Counter" element={<Counter />} />
 
-        <Route path="/users" element={<GithubUserList />}>
+        {/* <Route path="/users" element={<GithubUserList />}>
         <Route index element= {<p>Add a user and select it</p>}/>
         <Route path=":username" element={<ShowGithubUser />} />
-        </Route>
+        </Route> */}
         <Route path="/AlertClock" element={<AlertClock />} />
         
         <Route path="/FilteredList" element={<FilteredList />} />
@@ -45,7 +48,7 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
         
-
+        <Route path="/users" element={<GitHubUsers/>} />
         
       </Routes>
       

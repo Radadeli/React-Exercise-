@@ -7,7 +7,7 @@ export function ShowGithubUser() {
 
   return (
     <div>
-      <h1>Show GitHub User</h1>
+      <h1>Show GitHub List</h1>
       <GitHubUser username={username} />
     </div>
   );

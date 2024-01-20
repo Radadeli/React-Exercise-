@@ -38,10 +38,8 @@
 
 import useSWR from "swr";
 
-const fetcher = url => fetch(url).then(response => response.json())
-
 export function useGitHubUser(username){
-  const { data, error, revalidate } = useSWR(username ? `https://api.github.com/users/${username}` : null, fetcher);
+  const { data, error, revalidate } = useSWR(username ? `https://api.github.com/users/${username}` : null);
 
   const refetchUser = () => revalidate();
 
