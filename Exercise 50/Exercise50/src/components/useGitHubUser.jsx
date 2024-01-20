@@ -41,21 +41,16 @@ import useSWR from "swr";
 const fetcher = url => fetch(url).then(response => response.json())
 
 export function useGitHubUser(username){
-  const { data, error } = useSWR(username ? `https://api.github.com/users/${username}` : null, fetcher);
+  const { data, error, revalidate } = useSWR(username ? `https://api.github.com/users/${username}` : null, fetcher);
 
-  return(
-    <div>
-      {!data && !error && <h3>Loading...</h3>}
-      {error && <h3>An error has occurred</h3>}
-      {data && !error && ( 
-        <ul>
-          {data.map((user) => (
-            <li key={user.login}>{user.login}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )
+  const refetchUser = () => revalidate();
+
+  return {
+    data,
+    error,
+    refetchUser,
+    isLoading: !data && !error,
+  };
 }
 
 export default useGitHubUser;
